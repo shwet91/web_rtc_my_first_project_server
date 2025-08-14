@@ -1,0 +1,4 @@
+node_modules/     # Ignore the whole node_modules folder
+dist/
+build/
+.env
