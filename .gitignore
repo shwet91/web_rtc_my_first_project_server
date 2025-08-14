@@ -1,4 +1,4 @@
-node_modules/     # Ignore the whole node_modules folder
+node_modules/     
 dist/
 build/
 .env
