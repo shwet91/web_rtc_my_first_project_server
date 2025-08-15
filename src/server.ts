@@ -13,7 +13,7 @@ const io = new Server(server, {
     origin: process.env.FRONTEND_URL,
   },
 });
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Middleware to parse JSON
 app.use(express.json());
