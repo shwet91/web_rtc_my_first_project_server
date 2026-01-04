@@ -83,6 +83,13 @@ io.on("connection", (socket) => {
     io.to(socketId).emit("start-btn-clicked");
   });
 
+  socket.on("negotiation-call-accepted", (data) => {
+    const { remoteName } = data;
+    console.log("negotiation btn clicked :", remoteName);
+    const socketId = nameToSocketIdMapping.get(remoteName);
+    io.to(socketId).emit("stream-started");
+  });
+
   socket.on("disconnect", () => {
     console.log("User disconnected:", socket.id);
   });
