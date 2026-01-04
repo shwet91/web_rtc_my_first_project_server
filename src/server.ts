@@ -70,7 +70,7 @@ io.on("connection", (socket) => {
     io.to(socketId).emit("call-accepted", { answer });
   });
 
-  socket.on("negotiaiton-call-accepted", (data) => {
+  socket.on("negotiation-call-accepted", (data) => {
     const { answer, offerSenderName } = data;
     const socketId = nameToSocketIdMapping.get(offerSenderName);
     io.to(socketId).emit("negotiation-call-accepted", { answer });
